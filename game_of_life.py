@@ -6,11 +6,11 @@
 # When the game of life is over, enter is inputted to create a new random seed in the grid, and the game of life continues
 # Messages are outputted when this happens
 
-#Random is imported as it is needed for random seeding
+# Random is imported as it is needed for random seeding
 import random
 
-#Subroutine for seeding the cells initial values
-#Each cell has a 50% chance of starting live or not
+# Subroutine for seeding the cells initial values
+# Each cell has a 50% chance of starting live or not
 def seed_cells():
     for i in range(y_size):
         for j in range(x_size):
@@ -18,7 +18,7 @@ def seed_cells():
                 cells[i][j] = 1
             else: cells[i][j] = 0
 
-#Function to calculate number of live cells
+# Function to calculate number of live cells
 def live_cell_count():
     live_cells = 0
     for i in range(y_size):
@@ -27,7 +27,7 @@ def live_cell_count():
                 live_cells += 1
     return live_cells
 
-#Subroutine to display Cells
+# Subroutine to display Cells
 def display_cells():
     for i in range(y_size):
         for j in range(x_size):
@@ -35,8 +35,8 @@ def display_cells():
             print(cells[i][j], end =" ")
         print("")
 
-#Count how many neighbour cells are live
-#Initial if statements for each check are required so that locations outside the array are not checked
+# Count how many neighbour cells are live
+# Initial if statements for each check are required so that locations outside the array are not checked
 def count_neighbour_cells(y, x):
     neighbour_cells = 0
     if x > 0 and y > 0:
@@ -57,7 +57,7 @@ def count_neighbour_cells(y, x):
         if cells[y + 1][x + 1] == 1: neighbour_cells += 1
     return neighbour_cells
 
-#Function for comparing the contents of 2 arrays, if the returned value is 0 they are the same
+# Function for comparing the contents of 2 arrays, if the returned value is 0 they are the same
 def compare_arrays(array1, array2):
     difference = 0
     for i in range(y_size):
@@ -65,9 +65,9 @@ def compare_arrays(array1, array2):
             if array1[i][j] != array2[i][j]: difference += 1
     return difference
 
-#Although the grid is supposed to be infinite, only a finite sized grid can be used and displayed
-#The user selects the size of this within these while loops
-#A try...except loop is used so the user cannot input an invalid input
+# Although the grid is supposed to be infinite, only a finite sized grid can be used and displayed
+# The user selects the size of this within these while loops
+# A try...except loop is used so the user cannot input an invalid input
 while True:
     try:
         x_size = int(input('Define size of grid (x axis):'))
