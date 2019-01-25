@@ -1,10 +1,10 @@
 #BBC Game of Life Program
 
-#When displayed to a user, live cells will appear as 1, and dead cells are represented by a 0
-#After setting initial variables for size, the user presses enter to move to the next generation
-#If the generation doesn't change, or contains no live cells, the game of life is over
-#When the game of life is over, enter is inputted to create a new random seed in the grid, and the game of life continues
-#Messages are outputted when this happens
+# When displayed to a user, live cells will appear as 1, and dead cells are represented by a 0
+# After setting initial variables for size, the user presses enter to move to the next generation
+# If the generation doesn't change, or contains no live cells, the game of life is over
+# When the game of life is over, enter is inputted to create a new random seed in the grid, and the game of life continues
+# Messages are outputted when this happens
 
 #Random is imported as it is needed for random seeding
 import random
